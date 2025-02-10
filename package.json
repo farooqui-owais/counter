@@ -9,8 +9,9 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
+    "fix-paths": "node fix-paths.js",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "npm run build && npm run fix-paths && gh-pages -d dist"
   },
   "dependencies": {
     "react": "^18.3.1",
